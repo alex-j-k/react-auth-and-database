@@ -12,7 +12,7 @@ const WelcomePage = () => {
     return (  
 
         
-        <div className="WelcomePage">
+        <div className="welcomepage">
             <h1>Welcome!</h1>
             <LogOutButton></LogOutButton>
                              <React.Fragment>
