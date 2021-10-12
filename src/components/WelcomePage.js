@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import { AuthContext } from '../context/AuthContext';
 import LoggedIn from './LoggedIn';
 import PleaseLogIn from './PleaseLogIn';
@@ -6,7 +6,7 @@ import LogOutButton from './LogOutButton';
 
 const WelcomePage = () => {
 
-    const {uid, logMeOut} = useContext(AuthContext)
+    const {uid} = useContext(AuthContext)
 
 
     return (  

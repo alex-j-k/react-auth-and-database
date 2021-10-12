@@ -6,9 +6,14 @@ const firebaseConfig = {
     projectId: "react-auth-and-database",
     storageBucket: "react-auth-and-database.appspot.com",
     messagingSenderId: "57130381675",
-    appId: "1:57130381675:web:980dc0fbb76ccc58741c2e"
+    appId: "1:57130381675:web:980dc0fbb76ccc58741c2e",
+    databaseURL: "https://react-auth-and-database-default-rtdb.asia-southeast1.firebasedatabase.app"
   };
 
-var Firebase = firebase.initializeApp(firebaseConfig); 
+var Fire = firebase.initializeApp(firebaseConfig); 
  
-export default Firebase;
+export default Fire;
+
+// from firebase
+// https://react-auth-and-database-default-rtdb.asia-southeast1.firebasedatabase.app/
+// https://react-auth-and-database-default-rtdb.asia-southeast1.firebasedatabase.app

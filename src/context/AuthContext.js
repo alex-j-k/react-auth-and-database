@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import firebase from 'firebase';
 import firebaseApp from '../components/Firebase';
 
@@ -32,8 +32,18 @@ const AuthContextProvider = (props) => {
         console.log('logging out');
         setUid({uid: null});
         await firebase.auth().signOut();
-        
+        //FORCE PAGE TO RERENDER AND THUSHIDE LOGOUT BUTTON AND SHOW LOGIN BUTTONS
+        window.location.reload();
         }
+
+ //PERSIST STATE ON REFRESH
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                authHandler({user});
+            }
+        })
+    },[])
 
     return(
         <AuthContext.Provider value={{uid, authenticate, logMeOut}}>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import {AuthContext} from '../context/AuthContext';
 
 const LogOutButton = () => {
@@ -7,23 +7,25 @@ const LogOutButton = () => {
     return ( 
                 <React.Fragment>
                         {
-                                useEffect(() => {
-                            
-                                        uid ? 
-                                            (
-                                                <button 
-                                                className="logout"
-                                                onClick={() => {logMeOut()}}
-                                                >LOGOUT</button>
-                                            )
-                                        :
-                                                (
-                                            <div className="notloggedin">
-                                                You are not logged in...
-                                            </div>
-                                                )
+                        
+                         
+                        
+                        
+                        uid ? 
+                            (
+                                <button 
+                                className="logout"
+                                onClick={() => {logMeOut()}}
+                                >LOGOUT</button>
+                            )
+                        :
+                                (
+                            <div className="notloggedin">
+                                You are not logged in...
+                            </div>
+                                )
 
-                                    }, [uid])
+
                             }
                 </React.Fragment>
      );

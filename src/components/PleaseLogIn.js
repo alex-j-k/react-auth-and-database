@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 
 const PleaseLogIn = () => {
 
-    const {uid, authenticate} = useContext(AuthContext);
+    const { authenticate} = useContext(AuthContext);
 
     return ( 
         <div className="pleaselogin">
