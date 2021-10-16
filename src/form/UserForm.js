@@ -57,54 +57,57 @@ useEffect(() => {
 
         <React.Fragment>
         <form className='userform' onSubmit={handleSubmitCreateUser}>
-            <label htmlFor="username">User-Name</label>
-            
-            <input type="text" required id='username' placeholder='Please type your user-name here...' onChange={(e)=> setUserName(e.target.value)}/>
-            <label>{!userNameAvailable ? 'Your current username is already taken. Please Choose another...' : 'Your username is available'}</label>
+            <div className="username">
+                    <label className='username' htmlFor="username">User-Name</label>
+                    <input className='usernameinput' type="text" required id='username' placeholder='Please choose a username...' onChange={(e)=> setUserName(e.target.value)}/> 
+            </div> 
 
+            <div className="avail">
+                    <label>{!userNameAvailable ? 'Your current ***username is already taken.*** Please Choose another...' :  'Your username is available'}</label>
+            </div>
 
-            <p>Age</p>
+            <p className='age'>Age</p>
 
             <div className="radioanswers">
                     <div className="radio">
-                        <input name={age} type="radio" id='0-15' onChange={(e) => {setAge(e.target.value)}} value='0-15' />
-                        <label htmlFor="0-15">0-15</label>
+                        <input className='dot' name={age} type="radio" id='0-15' onChange={(e) => {setAge(e.target.value)}} value='0-15' />
+                        <label className="circle" htmlFor="0-15">0-15</label>
                     </div>
                     <div className="radio">
-                        <input name={age} type="radio" id='15-30' onChange={(e) => {setAge(e.target.value)}} value='15-30' />
-                        <label htmlFor="15-30">15-30</label>
+                        <input className='dot' name={age} type="radio" id='15-30' onChange={(e) => {setAge(e.target.value)}} value='15-30' />
+                        <label className="circle" htmlFor="15-30">15-30</label>
                     </div>
                     <div className="radio">
-                        <input name={age} type="radio" id='30-45' onChange={(e) => {setAge(e.target.value)}} value='30-45' />
-                        <label htmlFor="30-45">30-45</label>
+                        <input className='dot' name={age} type="radio" id='30-45' onChange={(e) => {setAge(e.target.value)}} value='30-45' />
+                        <label className="circle" htmlFor="30-45">30-45</label>
                     </div>
                     <div className="radio">
-                        <input name={age} type="radio" id='45-60' onChange={(e) => {setAge(e.target.value)}} value='45-60' />
-                        <label htmlFor="45-60">45-60</label>
+                        <input className='dot' name={age} type="radio" id='45-60' onChange={(e) => {setAge(e.target.value)}} value='45-60' />
+                        <label className="circle" htmlFor="45-60">45-60</label>
                     </div>
                     <div className="radio">
-                        <input name={age} type="radio" id='60+' onChange={(e) => {setAge(e.target.value)}} value='60+' />
-                        <label htmlFor="60+">60+</label>
+                        <input className='dot' name={age} type="radio" id='60+' onChange={(e) => {setAge(e.target.value)}} value='60+' />
+                        <label className="circle" htmlFor="60+">60+</label>
                     </div>
             </div>
 
-            <p>Country</p>
+            <p className='labels'>Country</p>
             <Countries setCountry={setCountry}></Countries>
 
-            <p>States</p>
+            <p className='labels'> States</p>
             <States setStates={setStates}></States>
 
-            <p>Dog vs Cat</p>
+            <p className='labels'>Dog vs Cat</p>
 
             <div className="petanswers">
-                    <input name={pet} type="radio" id='dog' value='dog' onChange={(e) => {setPet(e.target.value)}}/>
-                    <label htmlFor="dog">Dog Lover</label>
-                    <input name={pet} type="radio" id='cat' value='cat' onChange={(e) => {setPet(e.target.value)}}/>
-                    <label htmlFor="cat">Cat Lover</label>
+                    <input className='dot' name={pet} type="radio" id='dog' value='dog' onChange={(e) => {setPet(e.target.value)}}/>
+                    <label className='circle' htmlFor="dog">Dog Lover</label> <br/>
+                    <input id='cat' className='dot' name={pet} type="radio" id='cat' value='cat' onChange={(e) => {setPet(e.target.value)}}/>
+                    <label className='circle' htmlFor="cat">Cat Lover</label>
             </div>
 
-            <p>Colour</p>
-            <select required name="colour" onChange={(e)=> {setColour(e.target.value)}}>
+            <p className='colour'>Colour</p>
+            <select className='selectcountry' required name="colour" onChange={(e)=> {setColour(e.target.value)}}>
             <option disabled selected value="Choose">Choose your favourite colour...</option>
 
                 <option value="red">Red</option>
@@ -113,12 +116,14 @@ useEffect(() => {
                 <option value="yellow">Yellow</option>
              </select>
 
-             <p>On a sliding scale, how likey are you to agree with the statement:</p>
-             <p>"Pineapple belongs on pizza"</p>
-                <input required type="range" id='pizza' min='0' max='100' onChange={(e) => {setPizza(e.target.value)}}/>
+             <p  className='slidingtext'>On a sliding scale, how likey are you to agree with the statement:</p>
+             <p className='colour'>0 left - 100 right</p>
+
+             <p className='colour'>"Pineapple belongs on pizza"</p>
+                <input className='slider' required type="range" id='pizza' min='0' max='100' onChange={(e) => {setPizza(e.target.value)}}/>
 
 
-          <button  disabled={!userNameAvailable ? true : false}>Submit</button>
+          <button className='submitform'  disabled={!userNameAvailable ? true : false}>Submit</button>
         </form>
 
 

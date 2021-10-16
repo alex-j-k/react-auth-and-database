@@ -3,14 +3,15 @@ import Fire from '../components/Firebase';
 
 export const DbUsersContext = createContext();
 
-// CREATE STATE FOR USERLIST
 
 
 
 const DbUsersContextProvider = (props) => {
 
+// CREATE STATE FOR USERLIST
 
     const [DbUsersList, setDbUsersList] = useState([]);
+    
 
 
     useEffect(() => {
@@ -33,12 +34,6 @@ const DbUsersContextProvider = (props) => {
                          });
                },[])
 
-
-               console.log(DbUsersList);
-               console.log(DbUsersList);
-               console.log(DbUsersList);
-               console.log(DbUsersList);
-               console.log(DbUsersList);
 
 
     return (

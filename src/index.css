@@ -7,6 +7,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.atschool{  
+  /* background-image: url('./images/blackboard.jpg'); */
+  position: relative;
+}
+
+.atschool::before{
+  content: "";
+  background-image: url('./images/blackboard.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+.atshop{  
+  /* background-image: url('./images/shop.jpg'); */
+  position: relative;
+}
+
+.atshop::before{
+  content: "";
+  background-image: url('./images/shop.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
 .welcomepage {
   display: flex;
   flex-direction: column;
@@ -14,19 +48,143 @@ body {
   background-color: aquamarine;
 }
 
+h1{
+  font-family: 'press start 2p';
+
+}
+
 .loggedin{
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: lightblue;
+  padding-bottom: 100px;
+  width: 100%;
 }
 
+/*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM *//*USERFORM */
 .userform{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: cadetblue;
+  /* align-items: center; */
+  font-family: 'press start 2p';
+  background-color: rgb(44, 43, 43);
+  color: rgb(0, 150, 0, 0.75);
+  width: 100%;
+  font-size: 1.5rem;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.25), black 120%
+  );
 }
+
+::placeholder{
+  color: rgb(0, 150, 0, 0.75);
+}
+.usernameinput{
+  height: 40px;
+  width: 50%;
+  color: rgb(0, 150, 0, 0.75);
+  font-size: 1.5rem;
+  font-family: 'press start 2p';
+}
+
+.username{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40px;
+}
+.avail{
+  padding-left: 60px;
+
+}
+.age{
+  padding-top: 30px;
+  padding-left: 60px;
+}
+.radioanswers{
+  padding-left: 60px;;
+}
+.radio{
+  padding-bottom: 50px;
+}
+
+.circle{
+  padding-left: 50px;
+}
+.dot{
+  transform: scale(2)  ;  
+}
+.labels{
+  padding-top: 30px;
+  padding-left: 60px;
+}
+
+.selectcountry{
+  margin-left: 60px;
+width: 50%;
+height: 50px;
+font-size: 1.5rem;
+font-family: 'press start 2p';
+color:rgb(0, 150, 0, 0.75);
+}
+
+.petanswers{
+  margin-left: 60px;
+}
+
+#cat{
+  margin-top: 50px;
+}
+.colour{
+  margin-top: 50px;
+
+  margin-left: 60px;
+}
+
+.slidingtext{
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+.slider{
+  margin-bottom: 100px;
+  margin-left: 60px;
+  margin-right: 60px;
+  background-color: green;
+  height: 30px;
+
+  -webkit-appearance: none;
+
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.submitform{
+  width: 40%;
+  align-self: center;
+  margin-bottom: 300px;
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: 'press start 2p';
+  color: rgb(0, 150, 0, 0.75);
+  background: rgb(44, 43, 43);
+}
+
+/*DATABASE OUTPUT*//*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/ /*DATABASE OUTPUT*/
 
 .databaseoutput{
   display: flex;
@@ -41,3 +199,268 @@ body {
   align-items: center;
   background-color: red;
 }
+
+.scoredisplay{
+  position: relative;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+    margin: 7% auto;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));
+    background-color: #333;
+
+}
+.score{
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'permanent marker';
+  letter-spacing: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.questionnumber{
+  padding-top: 30px;
+  font-family: 'permanent marker';
+  color: salmon;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+
+}
+
+.todayslesson{
+  align-self: start;
+  color: #0085a3;
+  font-family: 'permanent marker';
+  margin-top: 0;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+
+}
+
+/*QUESTION SECTION*/
+
+.questions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: 200%;
+  background-position: left center;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/*START- NEXT BUTTONS*/
+.start, .nextbutton{
+  position: relative;
+  cursor: pointer;
+  background: linear-gradient(180deg, white, #ffcc91);
+  border: 2px solid #d38558;
+  box-shadow: 0px 5px 10px rgba(0,0,0, 0.5);
+  margin: 0;
+  height: 40px;
+  padding: 0 40px;
+  border-radius: 50px 50px;
+  font-family: 'reenie beanie';
+  font-size: 2rem;
+}
+
+.start:active, .nextbutton:active, .lockinorderbutton:active{
+  transform: scale(0.97) !important;
+  transform: translateY(2px);
+  color: red;
+
+}
+
+.lockinorderbutton{
+  justify-content: center;
+  margin-left: 28% !important;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(0deg, rgb(140, 140, 223), cornflowerblue);
+  border: 2px solid #d38558;
+  box-shadow: 0px 5px 10px rgba(0,0,0, 0.5);
+  margin: 0;
+  height: 40px;
+  padding: 0 40px;
+  border-radius: 10px 10px;
+}
+
+
+            /*SELECTED - DISABLED - CORRECT - INCORRECT*//*SELECTED - DISABLED - CORRECT - INCORRECT*//*SELECTED - DISABLED - CORRECT - INCORRECT*//*SELECTED - DISABLED - CORRECT - INCORRECT*/
+              .selected{
+                border: 5px solid goldenrod;
+                outline:2px solid greenyellow;
+              }
+
+              .disabled{
+                pointer-events: none;
+                opacity: 0.9;
+              }
+              .correct{
+                background: linear-gradient(90deg, #56FFA4, #59BC86) !important;
+              }
+              .incorrect{
+                background: linear-gradient(90deg, #FF5656, #C16868) !important;
+              }
+
+                        /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/ /*QUESTION TYPES*/
+                        
+                        .multiplechoice::before{
+                          content: '';
+                          width: 2px;
+                          height: 100%;
+                          background-color: rgba(255,0,0,0.6);
+                          position: absolute;
+                          top: 0;
+                          left: 40px;
+                        }
+
+                        .multiplechoice{/*BACKGROUND DIV*/
+                          position: relative;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          width: 70%;
+
+/* 
+                          align-self: center;
+                          max-width: 1000px;
+                          background: #ebfeff;
+                          border-radius: 10px;
+                          border: 2px solid #0085a3;
+                          padding: 20px;
+                          text-align: center;
+                          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.55); */
+
+                          
+                            background: #fff;
+                            border-radius: 8px;
+                            box-shadow: inset 0 0 0 2px #818080, inset 0 0 0 6px #f7e8dd;
+                            /* height: 804px; */
+                            padding: 62px 25px;
+                            width: 560px;
+
+
+                            background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+
+                          
+                        }
+
+                        .multiplechoicebutton{    /*EACH QUESTION BUTTON*/
+                          padding: 10px;
+                          margin: 10px;
+                          width: 70%;
+                          transform: scale(0.97) !important;
+                          transform: translateY(2px);
+                        
+                        }      
+                        
+                        .multiplechoicebutton:hover{
+                          transition: .4s;
+                          background: #FFF;
+                          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+                          border: 1px solid #FFF;
+                      }
+                        
+                      .text{                         /*TEXT OF THE ACTUAL BUTTON*/
+                        font-family: 'reenie beanie';
+                        color: #002b59;
+                        font-size: 2.5rem;
+                        font-weight: bolder;
+                      }              
+                                                   /*BACKGROUND DIV*/
+                                                   .dragndrop{
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    padding-left: 0;
+                                                    min-width: 70%;
+                                                   }
+                                                   .cards{
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    margin-left: 10px;
+                                                    margin-right: 10px;
+                                                    opacity: 1;
+
+                                                    /* width: 100%; */
+
+
+                                                    align-self: center;
+                                                    max-width: 1000px;
+                                                    /* background: #ebfeff; */
+                                                    border-radius: 10px;
+                                                    /* border: 2px solid #0085a3; */
+                                                    padding: 20px;
+                                                    text-align: center;
+                                                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.55);
+                                                  }                        
+                        
+                        
+                        
+                                                .multiplechoicebuttondragndrop{  /*BUTTON*/
+                                                display: flex;
+                                                flex-direction: row;
+                                                justify-content: center;
+                                                align-items: center;
+                                                padding: 10px;
+                                                margin: 10px;
+                                                width: 70%;
+                                                border: solid 2px black;
+                                                background: silver;
+
+                                                cursor: pointer;
+                                                font-size: 0.8rem;
+                                                height: 40px;
+                                                margin: 5px 0;
+                                                border-radius: 3px;
+                                              }  
+
+
+                                              .toptextdragndrop, .bottomtextdragndrop{
+                                                display: flex;
+                                                flex-direction: column;
+                                                font-weight: bolder;
+                                                color: white;
+                                                align-items: center;
+                                                font-weight: 900;
+
+                                              }
+
+                                              .textdragndrop{
+                                                display: flex;
+                                                flex-direction: column;
+                                                color: green;
+                                                align-items: center;
+                                                font-size: 1.5rem;
+                                                font-weight: 900;
+                                                margin-top: 0;
+                                              }
+
+
+                                              .screen{  
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                background-image: url('./images/icecreamscoop.jpg') !important;
+                                                background-size: cover;
+                                                background-position: right;
+                                              }
+
+                                              .marvel-device{
+                                                height: auto !important;
+                                                
+                                              }
+
+                                            
+                                                                         

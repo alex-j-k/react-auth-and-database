@@ -22,6 +22,12 @@ const PleaseLogIn = () => {
         Log In With Facebook
         </button>
 
+        <button 
+        className="anonymous"
+        onClick={() => authenticate('Anonymous')}>
+        Log In Anonymously
+        </button>
+
     </div>
      );
 }

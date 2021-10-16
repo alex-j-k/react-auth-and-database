@@ -2,7 +2,7 @@ import React from 'react'
 
 const States = ({setStates}) => {
     return ( 
-        <select required name="state" onChange={(e)=> {setStates(e.target.value)}}>
+        <select className='selectcountry' required name="state" onChange={(e)=> {setStates(e.target.value)}}>
                 <option disabled selected value="Choose">Choose your state or territory...</option>
 
 <option value="ACT">Australian Capital Territory</option>
